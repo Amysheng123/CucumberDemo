@@ -55,6 +55,11 @@ public class JsonPathDemo {
         //[{"name":"张三","pid":"500234199212121212","mobile":"18623456789","applied_at":"3","confirmed_at":"5","confirm_type":"overdue","loan_type":"1","test":"mytest","all":"2"}]
         System.out.println(records);
 
+        //9.1 返回applied_at大于等于3的值
+        List<Map<String, String>> records1 = context.read("$.result.records[?(@.applied_at >= '3')]");
+        //[{"name":"张三","pid":"500234199212121212","mobile":"18623456789","applied_at":"3","confirmed_at":"5","confirm_type":"overdue","loan_type":"1","test":"mytest","all":"2"}]
+        System.out.println(records1);
+
         //10 返回name等于李四的值
         List<Map<String, String>> records0 = context.read("$.result.records[?(@.name == '李四')]");
         //[{"name":"李四","pid":"500234199299999999","mobile":"13098765432","applied_at":"1","confirmed_at":"","confirm_type":"overdue","loan_type":"3"}]
