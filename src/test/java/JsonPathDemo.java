@@ -75,7 +75,7 @@ public class JsonPathDemo {
 
         //10.3返回name等于王五的值
         List<Map<String,String>> record4 = context.read("$.result.records[?@.name == '王五']");
-        System.out.println(record4+"dudu");
+        System.out.println(record4+"dudu"+"lala");
 
         //11 返回有test属性的数组
         List<Map<String, String>> records1 = context.read("$.result.records[?(@.test)]");
