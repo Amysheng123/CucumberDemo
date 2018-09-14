@@ -59,6 +59,10 @@ public class JsonPathDemo {
         List<Map<String, String>> records0 = context.read("$.result.records[?(@.name == '李四')]");
         //[{"name":"李四","pid":"500234199299999999","mobile":"13098765432","applied_at":"1","confirmed_at":"","confirm_type":"overdue","loan_type":"3"}]
         System.out.println(records0);
+        
+        //10.1返回name等于张三的值
+        List<Map<String,String>> record1 = comtext.read("$.result.records[?@.name == '张三']");
+        System.out.println(records1)
 
         //11 返回有test属性的数组
         List<Map<String, String>> records1 = context.read("$.result.records[?(@.test)]");
