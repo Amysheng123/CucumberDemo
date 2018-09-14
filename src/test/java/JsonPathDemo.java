@@ -56,9 +56,9 @@ public class JsonPathDemo {
         System.out.println(records);
 
         //9.1 返回applied_at大于等于3的值
-        List<Map<String, String>> records1 = context.read("$.result.records[?(@.applied_at >= '3')]");
+        List<Map<String, String>> records11 = context.read("$.result.records[?(@.applied_at >= '3')]");
         //[{"name":"张三","pid":"500234199212121212","mobile":"18623456789","applied_at":"3","confirmed_at":"5","confirm_type":"overdue","loan_type":"1","test":"mytest","all":"2"}]
-        System.out.println(records1);
+        System.out.println(records11);
 
         //10 返回name等于李四的值
         List<Map<String, String>> records0 = context.read("$.result.records[?(@.name == '李四')]");
@@ -71,7 +71,7 @@ public class JsonPathDemo {
 
         //10.2返回name等于王五的值
         List<Map<String,String>> record3 = context.read("$.result.records[?@.name == '王五']");
-        System.out.println(record3);
+        System.out.println(record3+"haha");
 
         //11 返回有test属性的数组
         List<Map<String, String>> records1 = context.read("$.result.records[?(@.test)]");
