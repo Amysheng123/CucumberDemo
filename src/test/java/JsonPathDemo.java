@@ -67,7 +67,7 @@ public class JsonPathDemo {
         
         //10.1返回name等于张三的值
         List<Map<String,String>> record1 = context.read("$.result.records[?@.name == '张三']");
-        System.out.println(record1);
+        System.out.println(record1+"git");
 
         //10.2返回name等于王五的值
         List<Map<String,String>> record3 = context.read("$.result.records[?@.name == '王五']");
